@@ -22,6 +22,7 @@ This is a starter kit for Influencity [Node.js](https://nodejs.org) projects.
     ```sh
     $ git clone git+ssh://git@github.com/Influencity/node-project-bootstrap.git <your_project_name>
     ```
+
 2. Modify package.json
     * name
     * version
@@ -31,6 +32,7 @@ This is a starter kit for Influencity [Node.js](https://nodejs.org) projects.
     * license
     * bugs
     * homepage
+
 3. Enjoy!
     * Install npm packages:
         ```sh
@@ -61,9 +63,9 @@ This is a starter kit for Influencity [Node.js](https://nodejs.org) projects.
         $ npm run start
         ```
 
-    > **Note:**
-    > Development and production environments differ only in the use of `config/development.json` and `config/production.json` respectively as config.
-    At the moment, this only affects to the server listening port.
+> **Note:**
+> Development and production environments differ only in the use of `config/development.json` and `config/production.json` respectively as config.
+At the moment, this only affects to the server listening port.
 
 ----------
 
