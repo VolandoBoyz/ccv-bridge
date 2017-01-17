@@ -21,7 +21,10 @@
         "no-console": 0,
         "indent": [
             "error",
-            4
+            4,
+            {
+                "MemberExpression": 1
+            }
         ],
         "quotes": [
             2,
