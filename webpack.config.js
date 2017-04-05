@@ -1,4 +1,5 @@
-let nodeExternals = require("webpack-node-externals"),
+let WebpackNotifierPlugin = require("webpack-notifier"),
+    nodeExternals = require("webpack-node-externals"),
     stylishFormatter = require("eslint/lib/formatters/stylish"),
     path = require("path");
 
@@ -48,4 +49,7 @@ module.exports = {
         path: [__dirname, "bin"].join("/"),
         filename: "./[name].js"
     },
+    plugins: [
+        new WebpackNotifierPlugin()
+    ]
 };
