@@ -1,10 +1,11 @@
-let express = require("express"),
-    config = require("config"),
+let config = require("config"),
+    debug = require("debug")(process.env.npm_package_name + ":" + "app"),
+    express = require("express"),
     app = express();
 
 let start = listeningPort => {
     let server = app.listen(listeningPort, () => {
-        console.log("App running at http://localhost:" + server.address().port);
+        debug("App running at http://localhost:" + server.address().port);
     });
     return server;
 };
