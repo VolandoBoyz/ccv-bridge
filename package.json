@@ -9,7 +9,7 @@
         "dev": "DEBUG=${npm_package_name}:* nodemon bin/app.js",
         "start": "NODE_ENV=production nodemon bin/app.js",
         "pretest": "eslint --fix test",
-        "test": "mocha --recursive --compilers js:babel-core/register test"
+        "test": "NODE_PATH=. mocha --recursive --compilers js:babel-core/register test"
     },
     "repository": {
         "type": "git",
