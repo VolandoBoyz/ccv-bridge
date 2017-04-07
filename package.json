@@ -1,46 +1,61 @@
 {
-    "name": "influencity-node-project-bootstrap",
-    "version": "1.0.0",
-    "description": "Just an skeleton for bootstrapping Influencity Node.js projects",
-    "main": "src/app.js",
-    "scripts": {
-        "build": "webpack",
-        "watch": "webpack --watch",
-        "dev": "DEBUG=${npm_package_name}:* nodemon bin/app.js",
-        "start": "NODE_ENV=production nodemon bin/app.js",
-        "pretest": "eslint --fix test",
-        "test": "NODE_PATH=. mocha --recursive --compilers js:babel-core/register test"
+  "name": "influencity-node-project-bootstrap",
+  "version": "1.0.0",
+  "description": "Just an skeleton for bootstrapping Influencity Node.js projects",
+  "main": "src/app.js",
+  "scripts": {
+    "lint": "snazzy --fix",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "DEBUG=${npm_package_name}:* nodemon bin/app.js",
+    "start": "NODE_ENV=production nodemon bin/app.js",
+    "pretest": "snazzy --fix",
+    "test": "NODE_PATH=. mocha --recursive --compilers js:babel-core/register test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Influencity/node-project-bootstrap.git"
+  },
+  "author": "Juan Ramírez Ruiz <jramirez@influencity.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Influencity/node-project-bootstrap/issues"
+  },
+  "homepage": "https://github.com/Influencity/node-project-bootstrap#readme",
+  "dependencies": {
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.2.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "config": "^1.24.0",
+    "debug": "^2.6.3",
+    "eslint": "^3.12.2",
+    "eslint-loader": "^1.6.1",
+    "express": "^4.14.0",
+    "nodemon": "^1.11.0",
+    "standard": "^10.0.1",
+    "standard-loader": "^6.0.1",
+    "webpack": "^1.14.0",
+    "webpack-node-externals": "^1.5.4",
+    "webpack-notifier": "^1.5.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "chai-http": "^3.0.0",
+    "dirty-chai": "^1.2.2",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.6"
+  },
+  "standard": {
+    "env": {
+      "node": true,
+      "es6": true,
+      "mocha": true
     },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:Influencity/node-project-bootstrap.git"
-    },
-    "author": "Juan Ramírez Ruiz <jramirez@influencity.com>",
-    "license": "Apache-2.0",
-    "bugs": {
-        "url": "https://github.com/Influencity/node-project-bootstrap/issues"
-    },
-    "homepage": "https://github.com/Influencity/node-project-bootstrap#readme",
-    "dependencies": {
-        "babel-core": "^6.21.0",
-        "babel-eslint": "^7.2.1",
-        "babel-loader": "^6.2.10",
-        "babel-preset-es2015": "^6.18.0",
-        "config": "^1.24.0",
-        "debug": "^2.6.3",
-        "eslint": "^3.12.2",
-        "eslint-loader": "^1.6.1",
-        "express": "^4.14.0",
-        "nodemon": "^1.11.0",
-        "webpack": "^1.14.0",
-        "webpack-node-externals": "^1.5.4",
-        "webpack-notifier": "^1.5.0"
-    },
-    "devDependencies": {
-        "chai": "^3.5.0",
-        "chai-as-promised": "^6.0.0",
-        "chai-http": "^3.0.0",
-        "mocha": "^3.2.0",
-        "sinon": "^1.17.6"
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "sourceType": "module"
     }
+  }
 }

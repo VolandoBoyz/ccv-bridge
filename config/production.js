@@ -1,3 +1,3 @@
 module.exports = {
-    listeningPort: 5000
-};
+  listeningPort: 5000
+}
