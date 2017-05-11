@@ -1,79 +1,23 @@
-# Influencity Node Project Bootstrap
-This is a starter kit for Influencity [Node.js](https://nodejs.org) projects.
+## Community Core Vision Bridge (CCV-Bridge) 🌉
 
-----------
+[Bridge]: https://media.giphy.com/media/zQxOLmztiIWOs/giphy.gif "Bridge Image"
 
-## Stack used
-* [Express.js](http://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
-* [Webpack](http://webpack.github.io/) - A well-known module bundler.
-* [Babel](https://babeljs.io/) - The compiler for writing next-generation Javascript.
-* [Nodemon](https://nodemon.io/) - Monitor for any changes in your source and automatically restart your server.
-* [Node-Config](https://github.com/lorenwest/node-config) - Organizes hierarchical configurations for your app deployments.
-* [ESLint](http://eslint.org/) - The pluggable linting utility for Javascript and JSX.
-* [Mocha](http://mochajs.org/) - A feature-rich Javascript test framework making asynchronous testing simple and fun.
-* [Chai](http://chaijs.com/) - A BDD/TDD assertion library for Node.js and the browser.
-* [Sinon.JS](http://sinonjs.org/) - Standalone test spies, stubs and mocks for Javascript.
+This program acts as a bridge between Community Core Vision (CCV) and your Client via **socket.io**
 
-----------
+#### How it works?
 
-## How to use it
+1. Connects to OSC server where CCV is emitting
+2. Translates OSC information into a more usable JSON format
+3. Sends the stream of data to your client via socket.io
 
-1. Clone the repo
-    ```sh
-    $ git clone git+ssh://git@github.com/Influencity/node-project-bootstrap.git <your_project_name>
-    ```
+#### How to use it?
+1. Open CCV and leave it Open (it will start emitting data immediately)
+2. Run `npm run start` on CCV-Bridge's folder
+3. Now you can connect as many clients as you need to it and read the stream of data
 
-2. Modify package.json
-    * name
-    * version
-    * description
-    * repository
-    * author
-    * license
-    * bugs
-    * homepage
+>You can leave CCV and CCV-Bridge side by side to see the stream of data in relationship to the video
 
-3. Enjoy!
-    * Install npm packages:
-        ```sh
-        $ npm install
-        ```
-    * Build the binaries:
-        ```sh
-        $ npm run build
-        ```
-    * Build the binaries (watch mode):
-        ```sh
-        $ npm run watch
-        ```
-    * Run tests:
-        ```sh
-        $ npm run test
-        ```
-    * Run only some tests:
-        ```sh
-        $ npm run test <test_file_or_directory>
-        ```
-    * Start the server (development environment):
-        ```sh
-        $ npm run dev
-        ```
-    * Start the server (production environment):
-        ```sh
-        $ npm run start
-        ```
+#### Notes
 
-> **Note:**
-> Development and production environments differ only in the use of `config/development.json` and `config/production.json` respectively as config.
-At the moment, this only affects to the server listening port.
-
-----------
-
-## ToDo's
-* Dockerize the package.
-* A branch with basic routing configuration.
-* A branch with MongoDB configured as database.
-* Example spies/stubs/mocks with Sinon.
-
-## License
-[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- You can run `npm run start:osc` to see the stream of data in OSC raw format
+- You can run `npm dev` to run the app in watch mode when developing over it (it will restart itself with every change).
