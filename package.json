@@ -4,12 +4,9 @@
   "description": "Just an skeleton for bootstrapping Influencity Node.js projects",
   "main": "src/app.js",
   "scripts": {
-    "lint": "snazzy --fix",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "dev": "DEBUG=${npm_package_name}:* nodemon src/app.js",
-    "start": "NODE_ENV=production nodemon src/app.js",
-    "pretest": "snazzy --fix",
+    "start": "node src/app.js",
+    "start:osc": "node src/app.js osc",
+    "dev": "nodemon src/app.js",
     "test": "NODE_PATH=. mocha --recursive --compilers js:babel-core/register test"
   },
   "repository": {
@@ -23,44 +20,16 @@
   },
   "homepage": "https://github.com/Influencity/node-project-bootstrap#readme",
   "dependencies": {
-    "babel-core": "^6.21.0",
-    "babel-eslint": "^7.2.1",
-    "babel-loader": "^6.2.10",
-    "config": "^1.24.0",
-    "debug": "^2.6.3",
-    "express": "^4.14.0",
-    "standard": "^10.0.1",
-    "standard-loader": "^6.0.1",
-    "webpack": "^1.14.0",
-    "webpack-node-externals": "^1.5.4",
-    "webpack-notifier": "^1.5.0"
+    "colors": "^1.1.2",
+    "express": "^4.15.2",
+    "node-osc": "^2.1.0",
+    "socket.io": "^1.7.3"
   },
   "devDependencies": {
-    "babel-preset-env": "^1.4.0",
-    "chai": "^3.5.0",
-    "chai-as-promised": "^6.0.0",
-    "chai-http": "^3.0.0",
-    "dirty-chai": "^1.2.2",
     "eslint": "^3.12.2",
-    "nodemon": "^1.11.0",
-    "eslint-loader": "^1.6.1",
-    "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "mocha": "^3.2.0",
-    "sinon": "^1.17.6"
-  },
-  "standard": {
-    "env": {
-      "node": true,
-      "es6": true,
-      "mocha": true
-    },
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "sourceType": "module"
-    }
+    "nodemon": "^1.11.0"
   }
 }

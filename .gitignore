@@ -1,8 +1,1 @@
-# This is a shared .gitignore file.
-# If you need to exclude files or directories locally
-#     (e.g. if you have a Jetbrains IDE installed and want
-#     to exclude the .idea dir) please use .git/info/exclude
-
-bin/
 node_modules/
-.npmrc
