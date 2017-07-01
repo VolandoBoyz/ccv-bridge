@@ -1,9 +1,9 @@
 ## Community Core Vision Bridge (CCV-Bridge) 🌉
 
-<div style="text-align:center" markdown="1">
+
 ![Bridge](https://cloud.githubusercontent.com/assets/8507571/25975297/bf8def1e-36ad-11e7-8d43-eff2cd21d058.gif)
-</div>
-</br>
+
+
 This program acts as a bridge between Community Core Vision (CCV) and your Client via **socket.io**
 
 #### How it works?
