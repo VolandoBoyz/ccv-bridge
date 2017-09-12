@@ -7,5 +7,6 @@ socket.on('connect', function () {
 });
 
 socket.on('osc-stream', function(msg){
-    var  OSCStream = msg;
+    OSCStream = msg;
+    console.log(OSCStream);
 });
